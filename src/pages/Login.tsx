@@ -47,11 +47,6 @@ export const Login: React.FC = () => {
     }
   };
 
-  const demoCredentials = {
-    ngo: { email: 'ngo@example.com', password: 'password123' },
-    volunteer: { email: 'volunteer@example.com', password: 'password123' }
-  };
-
   return (
     <div className="min-h-screen bg-neutral-50 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
@@ -79,16 +74,6 @@ export const Login: React.FC = () => {
                 {role}
               </button>
             ))}
-          </div>
-
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
-            <p className="text-sm font-semibold text-blue-900 mb-2">Demo Credentials:</p>
-            <p className="text-sm text-blue-800">
-              Email: <span className="font-mono">{demoCredentials[activeRole].email}</span>
-            </p>
-            <p className="text-sm text-blue-800">
-              Password: <span className="font-mono">{demoCredentials[activeRole].password}</span>
-            </p>
           </div>
 
           {error && (
